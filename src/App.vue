@@ -1,16 +1,19 @@
 <template>
   <div class="container">
     <!-- <reg-page/> -->
+    <up_landing/>
   </div>
 </template>
 
 <script>
 /* import regPage from "./components/registration.vue" */
+import up_landing from "./components/up-landing.vue"
 
 export default {
   name: 'app',
   components:{
     /* regPage */
+    up_landing
   }
 }
 </script>
