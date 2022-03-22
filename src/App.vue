@@ -1,26 +1,46 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome!"/>
+  <div class="container">
+    <!-- <reg-page/> -->
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+/* import regPage from "./components/registration.vue" */
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name: 'app',
+  components:{
+    /* regPage */
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+
+  *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  html, body {
+      background-color: var(--dark);
+      height: 100%;
+      width: 100%;
+   }
+
+   .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 100%;
+   }
+
+   #app{
+     height: 100%;
+   }
 </style>
