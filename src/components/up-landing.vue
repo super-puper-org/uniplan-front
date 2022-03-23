@@ -11,13 +11,24 @@
          <button class="signIn">Sign in</button>
          <button class="signUp">Sign up</button>
       </nav>
+
+      <div class="text-description">
+         <h1>Uniplan</h1>
+         <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim eum saepe corrupti optio similique aliquam possimus officiis molestiae neque reprehenderit quas ea odit provident, labore quos rem. Sed, sint quia.</h3>
+         <img src="../assets/landing-background.png" class="example-image"/>
+      </div>
    </div>
 </template>
 
 
 <script>
+/* import regPage from "./registration.vue" */
+
 export default{
    name: "up_landing",
+   components:{
+      /* regPage */
+   }
 }
 </script>
 
@@ -37,6 +48,12 @@ export default{
       width: 100%;
       background-color: var(--medium);
 
+      /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(../assets/landing-background.png);
+      background-repeat: no-repeat;
+      background-position: bottom right; */
+
+      background: linear-gradient(rgba(26,36,76, 0), rgba(26,36,76, 0.7));
+
       padding: 0 8%;
    }
 
@@ -44,6 +61,8 @@ export default{
       font-family: 'Bungee', cursive;
       display: flex;
       align-items: center;
+
+      cursor: pointer;
    }
 
    .logo{
@@ -77,6 +96,7 @@ export default{
       color: var(--accent);
       text-decoration: none;
       position: relative;
+      cursor: pointer;
    }
 
    nav ul li a::after{
@@ -100,7 +120,7 @@ export default{
       margin: 5px;
       border-radius: 5px;
       font-size: 16px;
-
+      cursor: pointer;
       transition-duration: 0.4s;
    }
 
@@ -126,5 +146,71 @@ export default{
    .signUp:hover{
       background-color: var(--medium);
       color: var(--accent);
+   }
+
+   .text-description{
+      color: var(--accent);
+      position: absolute;
+      /* margin-top: 30%; */
+      bottom: 8%;
+
+      /* animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0s;
+      animation-iteration-count: 2;
+      animation-name: slideInLeft; */
+   }
+
+   .text-description h1{
+      font-size: 80px;
+      font-family: 'Bungee', cursive;
+
+      animation-duration: 1.5s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0s;
+      /* animation-iteration-count: 2; */
+      animation-name: slideInLeft;
+   }
+
+   .text-description h3{
+      width: 30%;
+
+      float: left;
+
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0s;
+      /* animation-iteration-count: 2; */
+      animation-name: slideInLeft;
+   }
+
+   .example-image{
+      position: absolute;
+      /* border: 1px solid var(--accent); */
+      bottom: -50%;
+
+      animation-duration: 1.5s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0s;
+      /* animation-iteration-count: 2; */
+      animation-name: slideInTop;
+   }
+
+   @keyframes slideInLeft {
+      0% {
+         transform: translateX(-200%);
+      }
+      100% {
+         transform: translateX(0);
+      }
+   }
+
+   @keyframes slideInTop {
+      0% {
+         transform: translateY(100%);
+      }
+      100% {
+         transform: translateX(0);
+      }
    }
 </style>

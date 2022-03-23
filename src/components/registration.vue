@@ -36,11 +36,16 @@ export default {
       align-items: center;
       justify-content: center;
       /* background-color: var(--medium); */
+
+      /* position: fixed;
+
+      top: 50%;
+      left: 50%; */
    }
 
    .form {
       width: 400px;
-
+      background-color: var(--dark);
       border: 1px solid var(--blue);
    }
 
