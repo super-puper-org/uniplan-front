@@ -41,10 +41,11 @@
 
       <div class="third-module">
          <div class="some_text">
+            <h2>Why should you use it?</h2>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt iste amet praesentium ducimus asperiores quis dolorem nostrum delectus. Perspiciatis odit aliquid repudiandae? Error id deserunt voluptate incidunt tempora esse commodi perspiciatis deleniti pariatur ipsa explicabo saepe ab quibusdam, reiciendis nemo porro! Enim impedit delectus atque eum voluptatem recusandae accusamus!
          </div>
          <div class="image">
-            img
+            <img src="../assets/clock_image.png"/>
          </div>
       </div>
    </div>
@@ -205,6 +206,7 @@ export default{
    .description-module{
       height: 100vh;
       margin-top: 30px;
+      margin-left: 60px;
       /* background-color: var(--dark); */
 
       
@@ -256,12 +258,14 @@ export default{
 
    .second-module{
       height: 40vh;
-      width: 100%;
+      width: 94%;
       /* background-color: var(--dark); */
       margin-top: 100px;
 
       display: grid;
-      gap: 20px;
+      gap: 60px;
+
+      margin-left: 3%;
 
       grid-template-columns: 1fr 1fr 1fr 1fr;
    }
@@ -290,14 +294,15 @@ export default{
 
    .third-module{
       height: 40vh;
-      width: 100%;
+      width: 94%;
+      margin-left: 3%;
       /* background-color: var(--dark); */
       margin-top: 100px;
 
       display: grid;
       gap: 20px;
 
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 2fr 1fr;
 
       font-size: 20px;
    }
@@ -306,5 +311,15 @@ export default{
       display: grid;
       place-items: center;
       color: rgba(255, 255, 255, 0.4);
+   }
+
+   .third-module img{
+      width: 200px;
+   }
+
+   .third-module h2{
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 40px;
+      
    }
 </style>
