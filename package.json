@@ -9,9 +9,10 @@
   },
   "dependencies": {
     "core-js": "^3.21.1",
-    "node": "^16.13.2",
+    "node": "^17.7.1",
     "vue": "^3.2.31",
     "vue-modally-v3": "^0.0.7",
+    "vue-router": "4",
     "whatwg-fetch": "^3.6.2"
   },
   "devDependencies": {
