@@ -9,7 +9,6 @@
             <li><a href="#">Lets start</a></li>
          </ul>
          <button class="signIn">Sign in</button>
-         <!-- <button class="signUp">Sign up</button> -->
       </nav>
 
       <!-- <dialog
@@ -57,7 +56,7 @@
 
       <footer>
          <div>
-            <h1 class="header-footer"><!-- <img src="../assets/logo.png" class="logo"/> -->Uniplan</h1> 
+            <h1 class="header-footer">Uniplan</h1> 
          </div>
          <div>
             <h3 class="sub-header">Main:</h3>
@@ -132,7 +131,6 @@ export default{
    }
 
    .wrapper{
-      /* background: red; */
       margin: 0px auto;
 
       display: flex;
@@ -142,31 +140,13 @@ export default{
       width: 100%;
 
       height: 100%;
-      /* background-color: var(--medium); */
+      
       padding: 0 2%;
 
 
       background: rgb(13,18,38);
       background: linear-gradient(0deg, rgba(13,18,38,1) 0%, rgba(26,36,76,1) 40%);
    }
-
-   /* @media (max-width: 1200px){
-      .wrapper{
-         max-width: 970px;
-      }
-   }
-
-   @media (max-width: 992px){
-      .wrapper{
-         max-width: 750px;
-      }
-   }
-
-   @media (max-width: 767px){
-      .wrapper{
-         max-width: none;
-      }
-   } */
 
    .header{
       font-family: 'Bungee', cursive;
@@ -244,40 +224,26 @@ export default{
       border: 2px solid var(--accent);
    }
 
-   /* .signUp{
-      background-color: var(--accent);
-      color: var(--dark);
-      border: 1px solid var(--accent)
-   }
-
-   .signUp:hover{
-      background-color: var(--medium);
-      color: var(--accent);
-   } */
-
    .description-module{
       height: 100vh;
       margin-top: 30px;
       margin-left: 60px;
-      /* background-color: var(--dark); */
-
       
+      margin-bottom: 100px;
       
-      background-image: url(../assets/first_module_background_image.png);
+      background-image: url(../assets/landing-background.png);
       background-repeat: no-repeat;
       
       background-position-x: 360px;
-      background-position-y: 40px;
+      background-position-y: 30px;
    }
 
    .text-description{
       padding-top: 34%;
       color: var(--accent);
-      /* background: rgba(255, 255, 255, 0.2); */
       height:100%;
       
       backdrop-filter: blur(8px);
-      /* background-color:var(--light); */
    }
 
    .text-description h1{
@@ -286,7 +252,7 @@ export default{
       animation-duration: 1.5s;
       animation-timing-function: ease-in-out;
       animation-delay: 0s;
-      /* animation-iteration-count: 2; */
+      
       animation-name: slideInLeft;
    }
 
@@ -295,7 +261,7 @@ export default{
       animation-duration: 2s;
       animation-timing-function: ease-in-out;
       animation-delay: 0s;
-      /* animation-iteration-count: 2; */
+      
       animation-name: slideInLeft;
    }
 
@@ -311,8 +277,9 @@ export default{
    .second-module{
       height: 40vh;
       width: 94%;
-      /* background-color: var(--dark); */
+      
       margin-top: 100px;
+      margin-bottom: 100px;
 
       display: grid;
       gap: 60px;
@@ -325,10 +292,10 @@ export default{
    .second-module div{
       display: grid;
       place-items: left;
-      /* border: 2px dashed lightgray; */
+      
       margin: 10px;
       padding: 10px; 
-      /* color: var(--accent); */
+      
    }
 
    .second-module h2{
@@ -348,8 +315,9 @@ export default{
       height: 40vh;
       width: 94%;
       margin-left: 3%;
-      /* background-color: var(--dark); */
+      
       margin-top: 100px;
+      margin-bottom: 100px;
 
       display: grid;
       gap: 20px;
@@ -367,6 +335,7 @@ export default{
 
    .third-module img{
       width: 200px;
+      filter: invert(1);
    }
 
    .third-module h2{
@@ -395,8 +364,7 @@ export default{
 
    .footer-header{
       font-family: 'Bungee', cursive;
-      /* display: flex; */
-      /* align-items: center; */
+      
       cursor: pointer;
 
       margin: 10px;
@@ -413,13 +381,11 @@ export default{
    }
 
    footer div ul{
-      /* flex: 1; */
       text-align: right;
       padding-right: 30px;
    }
 
    footer div ul li{
-      /* display: inline-block; */
       list-style: none;
       margin: 10px 30px;
    }
@@ -441,6 +407,7 @@ export default{
 
    .reach-ul a img{
       width: 30px;
+      filter: invert(1);
    }
 
    footer div ul li a{
