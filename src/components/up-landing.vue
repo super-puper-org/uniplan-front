@@ -24,7 +24,12 @@
          </div>
       </div>
 
-      <div class="second-module">
+      <div
+        class="second-module"
+         data-aos="slide-up"
+         data-aos-ease = 'ease'
+         data-aos-duration="1500"
+         data-aos-once=true>
          <div class="stat1">
             <h2>40%</h2>
             <p>of people complain about the lack of time.</p>
@@ -44,7 +49,12 @@
       </div>
 
 
-      <div class="third-module">
+      <div 
+         class="third-module"
+         data-aos="slide-up"
+         data-aos-ease = 'ease'
+         data-aos-duration="1500"
+         data-aos-once=true>
          <div class="some_text">
             <h2>Why should you use it?</h2>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt iste amet praesentium ducimus asperiores quis dolorem nostrum delectus. Perspiciatis odit aliquid repudiandae? Error id deserunt voluptate incidunt tempora esse commodi perspiciatis deleniti pariatur ipsa explicabo saepe ab quibusdam, reiciendis nemo porro! Enim impedit delectus atque eum voluptatem recusandae accusamus!
@@ -110,6 +120,9 @@ export default{
       return{
          regFormDialogVisible: false,
       };
+   },
+   mounted(){
+      /* AOS.init() */
    }
 }
 </script>
