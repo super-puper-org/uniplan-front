@@ -12,6 +12,12 @@
          <!-- <button class="signUp">Sign up</button> -->
       </nav>
 
+      <!-- <dialog
+      :sync="regFormDialogVisible">
+         <reg-page/>
+      </dialog> -->
+
+
       <div class="description-module">
          <div class="text-description">
             <h1>Uniplan</h1>
@@ -22,19 +28,19 @@
       <div class="second-module">
          <div class="stat1">
             <h2>40%</h2>
-            <p>Тратят треть времени на личные нужды.</p>
+            <p>of people complain about the lack of time.</p>
          </div>
          <div class="stat2">
-            <h2>40%</h2>
-            <p>Тратят треть времени на личные нужды.</p>
+            <h2>~2h</h2>
+            <p>per day man doing nothing.</p>
          </div>
          <div class="stat3">
-            <h2>40%</h2>
-            <p>Тратят треть времени на личные нужды.</p>
+            <h2>>3%</h2>
+            <p>of people use time-managment.</p>
          </div>
          <div class="stat4">
-            <h2>40%</h2>
-            <p>Тратят треть времени на личные нужды.</p>
+            <h2>2.3MM</h2>
+            <p>of people don't know how to spend there free time.</p>
          </div>
       </div>
 
@@ -48,6 +54,47 @@
             <img src="../assets/clock_image.png"/>
          </div>
       </div>
+
+      <footer>
+         <div>
+            <h1 class="header-footer"><!-- <img src="../assets/logo.png" class="logo"/> -->Uniplan</h1> 
+         </div>
+         <div>
+            <h3 class="sub-header">Main:</h3>
+            <ul>
+               <li><a href="#">About</a></li>
+               <li><a href="#">How to use</a></li>
+               <li><a href="#">Lets start</a></li>
+            </ul>
+         </div>
+
+         <div>
+            <h3 class="sub-header">Additionally:</h3>
+            <ul>
+               <li><a href="#">Personal area</a></li>
+               <li><a href="#">FAQ</a></li>
+            </ul>
+         </div>
+
+
+         <div>
+            <h3 class="sub-header">How to reach us:</h3>
+            <ul class="reach-ul">
+               <li><a href="#"><img src="../assets/gh-logo.png"/></a></li>
+               <li><a href="#"><img src="../assets/tg-logo.png"/></a></li>
+               <li><a href="#"><img src="../assets/vk-logo.png"/></a></li>
+            </ul>
+         </div>
+
+         <div>
+            <h3 class="sub-header">Developers:</h3>
+            <ul>
+               <li><a href="#">Boris</a> <p>- frontend</p> </li>
+               <li><a href="#">Lina</a> <p>- backend</p> </li>
+               <li><a href="#">Artem</a> <p>- database</p> </li>
+            </ul>
+         </div>
+      </footer>
    </div>
 </template>
 
@@ -59,6 +106,11 @@ export default{
    name: "up_landing",
    components:{
       /* regPage */
+   },
+   data(){
+      return{
+         regFormDialogVisible: false,
+      };
    }
 }
 </script>
@@ -321,5 +373,83 @@ export default{
       color: rgba(255, 255, 255, 0.6);
       font-size: 40px;
       
+   }
+
+   footer{
+      width: 94%;
+      margin-left: 3%;
+      margin-top: 100px;
+      padding-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      height: 200px;
+
+      color: rgba(255, 255, 255, 0.9);
+
+      padding-bottom: 20px;
+   }
+
+   footer div{
+      display: grid;
+   }
+
+   .footer-header{
+      font-family: 'Bungee', cursive;
+      /* display: flex; */
+      /* align-items: center; */
+      cursor: pointer;
+
+      margin: 10px;
+      padding-top: 0px;
+
+      text-align: right;
+      padding-right: 30px;
+   }
+
+   .sub-header{
+      text-align: right;
+      padding-right: 30px;
+      margin: 10px 30px;
+   }
+
+   footer div ul{
+      /* flex: 1; */
+      text-align: right;
+      padding-right: 30px;
+   }
+
+   footer div ul li{
+      /* display: inline-block; */
+      list-style: none;
+      margin: 10px 30px;
+   }
+
+   .reach-ul{
+      flex: 1;
+      text-align: right;
+   }
+
+   .reach-ul li{
+      display: inline-block;
+      list-style: none;
+      margin: 10px 15px;
+   }
+
+   .reach-ul li a{
+      padding: 2px;
+   }
+
+   .reach-ul a img{
+      width: 30px;
+   }
+
+   footer div ul li a{
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      position: relative;
+   }
+
+   footer div ul li p{
+      color: rgba(255, 255, 255, 0.4);
    }
 </style>
