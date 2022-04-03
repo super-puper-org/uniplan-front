@@ -24,8 +24,7 @@
          </div>
       </div>
 
-      <div
-        class="second-module"
+      <div class="second-module"
          data-aos="slide-up"
          data-aos-ease = 'ease'
          data-aos-duration="1500"
@@ -44,13 +43,12 @@
          </div>
          <div class="stat4">
             <h2>2.3MM</h2>
-            <p>of people don't know how to spend there free time.</p>
+            <p>of people don't know how to spend their free time.</p>
          </div>
       </div>
 
 
-      <div 
-         class="third-module"
+      <div class="third-module"
          data-aos="slide-up"
          data-aos-ease = 'ease'
          data-aos-duration="1500"
@@ -62,6 +60,17 @@
          <div class="image">
             <img src="../assets/clock_image.png"/>
          </div>
+      </div>
+
+      <div class="forth-module"
+         data-aos="slide-up"
+         data-aos-ease = 'ease'
+         data-aos-duration="1500"
+         data-aos-once=true>
+         <up-carousel
+            :carousel_data="sliderItems"
+            :interval="5000"
+         />
       </div>
 
       <footer>
@@ -109,21 +118,41 @@
 
 
 <script>
+import upCarousel from './up-carousel.vue';
+
 /* import regPage from "./registration.vue" */
 
 export default{
    name: "up_landing",
    components:{
       /* regPage */
+      upCarousel,
    },
    data(){
       return{
-         regFormDialogVisible: false,
+         sliderItems: [
+            {
+               id: 1,
+               name: "Time-managment", 
+               text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem numquam ut eos culpa voluptate atque suscipit qui porro, eligendi aut delectus quidem saepe consequatur! Facilis, eveniet? Maxime rerum vitae exercitationem vel suscipit voluptatem earum sequi, ea, quod, explicabo tempora quisquam?",
+               image: "timemanagment.png"
+            },
+            {
+               id: 2, 
+               name: "Deadlines", 
+               text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem numquam ut eos culpa voluptate atque suscipit qui porro, eligendi aut delectus quidem saepe consequatur! Facilis, eveniet? Maxime rerum vitae exercitationem vel suscipit voluptatem earum sequi, ea, quod, explicabo tempora quisquam?",
+               image: "deadline.png"
+            },
+            {
+               id: 3, 
+               name: "Create actions", 
+               text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem numquam ut eos culpa voluptate atque suscipit qui porro, eligendi aut delectus quidem saepe consequatur! Facilis, eveniet? Maxime rerum vitae exercitationem vel suscipit voluptatem earum sequi, ea, quod, explicabo tempora quisquam?",
+               image: "calendar.png"
+            },
+         ]
       };
    },
-   mounted(){
-      /* AOS.init() */
-   }
+   mounted(){}
 }
 </script>
 
@@ -234,7 +263,7 @@ export default{
       background-color: rgba(13,18,38,0.7);
       color: var(--accent);
 
-      border: 2px solid var(--accent);
+      border: 1px solid var(--accent);
    }
 
    .description-module{
@@ -357,6 +386,20 @@ export default{
       
    }
 
+
+   .forth-module{
+      /* min-height: 40vh; */
+      width: 94%;
+
+
+      /* background: var(--accent-pink); */
+      
+      margin-top: 100px;
+      margin-bottom: 100px;
+
+      margin-left: 3%;
+   }
+
    footer{
       width: 94%;
       margin-left: 3%;
@@ -421,6 +464,15 @@ export default{
    .reach-ul a img{
       width: 30px;
       filter: invert(1);
+   }
+
+   .reach-ul img{
+      transition-duration: 0.5s;
+      border-radius: 5px;
+   }
+
+   .reach-ul img:hover{
+      background-color: rgba(0, 0, 0, 0.4);
    }
 
    footer div ul li a{
