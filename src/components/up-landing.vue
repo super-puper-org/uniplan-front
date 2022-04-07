@@ -116,8 +116,8 @@
             <h3 class="sub-header">Developers:</h3>
             <ul>
                <li><a href="#">Boris</a> <p>- frontend</p> </li>
-               <li><a href="#">Lina</a> <p>- backend</p> </li>
-               <li><a href="#">Artem</a> <p>- database</p> </li>
+               <!-- <li><a href="#">Lina</a> <p>- backend</p> </li>
+               <li><a href="#">Artem</a> <p>- database</p> </li> -->
             </ul>
          </div>
       </footer>
