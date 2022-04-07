@@ -7,4 +7,5 @@ const app = createApp(App);
 
 app.AOS = new AOS.init();
 
-app.mount('#app');
+app
+   .mount('#app');

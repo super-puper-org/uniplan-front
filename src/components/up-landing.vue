@@ -8,19 +8,24 @@
             <li><a href="#">How to use</a></li>
             <li><a href="#">Lets start</a></li>
          </ul>
-         <button class="signIn">Sign in</button>
+         <button 
+            class="signIn"
+            @click="regFormOpen">Sign in</button>
       </nav>
 
-      <!-- <dialog
-      :sync="regFormDialogVisible">
-         <reg-page/>
-      </dialog> -->
+      <!-- <reg-page --------------------- Форма регистрации
+         v-show="regFormVisible"
+         @close="regFormClose">
+
+      </reg-page> -->
 
 
       <div class="description-module">
          <div class="text-description">
             <h1>Uniplan</h1>
-            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim eum saepe corrupti optio similique aliquam possimus officiis molestiae neque reprehenderit quas ea odit provident, labore quos rem. Sed, sint quia.</h3>
+            <h3>
+               Study sessions, work meetings, walks with friends will never go out of your head if they are recorded. Uniplan is your own personal planner right in the browser.
+            </h3>
          </div>
       </div>
 
@@ -55,10 +60,13 @@
          data-aos-once=true>
          <div class="some_text">
             <h2>Why should you use it?</h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt iste amet praesentium ducimus asperiores quis dolorem nostrum delectus. Perspiciatis odit aliquid repudiandae? Error id deserunt voluptate incidunt tempora esse commodi perspiciatis deleniti pariatur ipsa explicabo saepe ab quibusdam, reiciendis nemo porro! Enim impedit delectus atque eum voluptatem recusandae accusamus!
+            <p>
+            In order to better remember any information, you need to write it down. The diary works in this direction. But this diary will also remind you of the upcoming event. In uniplan you can not only add an event, but also adjust its frequency. You can also attach additional parameters: for example, a link to a studying session. Create your uniplan and see how easy it is!
+            </p>
          </div>
          <div class="image">
             <img src="../assets/clock_image.png"/>
+            <!-- <up-clock/> -->
          </div>
       </div>
 
@@ -69,7 +77,7 @@
          data-aos-once=true>
          <up-carousel
             :carousel_data="sliderItems"
-            :interval="5000"
+            :interval="10000"
          />
       </div>
 
@@ -119,14 +127,16 @@
 
 <script>
 import upCarousel from './up-carousel.vue';
+/* import upClock from './up-clock.vue' */
 
-/* import regPage from "./registration.vue" */
+/* import regPage from "./registration.vue" -------------Импорт компонента регистрации */
 
 export default{
    name: "up_landing",
    components:{
-      /* regPage */
+      /* regPage, ---------------Подключение компоненте */
       upCarousel,
+      /* upClock */
    },
    data(){
       return{
@@ -134,25 +144,34 @@ export default{
             {
                id: 1,
                name: "Time-managment", 
-               text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem numquam ut eos culpa voluptate atque suscipit qui porro, eligendi aut delectus quidem saepe consequatur! Facilis, eveniet? Maxime rerum vitae exercitationem vel suscipit voluptatem earum sequi, ea, quod, explicabo tempora quisquam?",
+               text: "Time management is one of the most important techniques in the modern world. Mastering it is not always easy, but it is always worth taking small steps that will lead to big changes. Feel free to spice all your plans out of your head in uniplan!",
                image: "timemanagment.png"
             },
             {
                id: 2, 
                name: "Deadlines", 
-               text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem numquam ut eos culpa voluptate atque suscipit qui porro, eligendi aut delectus quidem saepe consequatur! Facilis, eveniet? Maxime rerum vitae exercitationem vel suscipit voluptatem earum sequi, ea, quod, explicabo tempora quisquam?",
+               text: "Say no to deadlines. To save your nervous system, you need to gradually complete the task, and not a couple of hours before the end of time. In the future, uniplan will help to effectively perform the upcoming tasks.",
                image: "deadline.png"
             },
             {
                id: 3, 
                name: "Create actions", 
-               text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem numquam ut eos culpa voluptate atque suscipit qui porro, eligendi aut delectus quidem saepe consequatur! Facilis, eveniet? Maxime rerum vitae exercitationem vel suscipit voluptatem earum sequi, ea, quod, explicabo tempora quisquam?",
+               text: "Add your events, change their colors: by category or in random order (here only you are the boss). Set up places, make appointments - all this is possible right now with uniplan.",
                image: "calendar.png"
             },
-         ]
+         ],
+         regFormVisible: false,
       };
    },
-   mounted(){}
+   mounted(){},
+   methods:{
+      regFormOpen(){
+         this.regFormVisible = true;
+      },
+      regFormClose(){
+         this.regFormVisible = false;
+      }
+   }
 }
 </script>
 
@@ -262,6 +281,8 @@ export default{
    .signIn:hover{
       background-color: rgba(13,18,38,0.7);
       color: var(--accent);
+
+      transform: scale(1.05) perspective(1px);
 
       border: 1px solid var(--accent);
    }
@@ -378,6 +399,10 @@ export default{
    .third-module img{
       width: 200px;
       filter: invert(1);
+   }
+
+   .third-module p{
+      font-size: 23px;
    }
 
    .third-module h2{
